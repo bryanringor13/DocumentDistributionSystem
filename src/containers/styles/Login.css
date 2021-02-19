@@ -1,0 +1,17 @@
+main.MuiGrid-root.login-wrapper.MuiGrid-container {
+    height: 100vh;
+}
+.MuiGrid-root.login-right-content.MuiGrid-item {
+    display: flex;
+    align-items: center;
+}
+.login-content {
+    width: 100%;
+    max-width: 368px;
+    margin-left: auto;
+    margin-right: 95px;
+}
+
+.icon-show-cust span {
+    margin-right: 10px;
+}

@@ -1,0 +1,28 @@
+@charset 'UTF-8';
+
+// Configuration and helpers
+@import 'abstracts/variables', 'abstracts/mixins';
+
+// Base stuff
+@import 'base/base', 'base/fonts', 'base/typography',
+  // 'base/bootstrap-utilities',
+    'base/helpers';
+
+// Components
+// @import
+//   'components/forms',
+//   'components/table',
+//   'components/otp-form',
+//   'components/nav',
+//   'components/notification',
+//   'components/scrollable',
+//   'components/cards/card',
+//   'components/cards/loan',
+//   'components/cards/userAccount';
+
+// Vendor
+@import 'vendor/material-overides';
+
+// Page-specific styles
+// @import
+//   'pages/home';

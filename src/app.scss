@@ -1,0 +1,388 @@
+//@extend
+
+/// System - Success
+/// @type Color
+$success: #41b67f !default;
+
+/// System - Info
+/// @type Color
+$info: #3498db !default;
+
+/// System - Error
+/// @type Color
+$error: #e24c4c !default;
+
+/// System - Warning
+/// @type Color
+$warning: #ffc632 !default;
+
+// A map of breakpoints.
+$breakpoints: (
+  mobile: 768px,
+  laptop: 1240px,
+  desktop-lg: 1800px,
+);
+
+@mixin breakpoint($breakpoint, $direction) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @if $direction==max {
+      @media (max-width: ($breakpoint-value - 1)) {
+        @content;
+      }
+    } @else if $direction==min {
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+    } @else {
+      @media ($direction: $breakpoint-value) {
+        @content;
+      }
+    }
+  } @else {
+    @if $direction==max {
+      @media (max-width: $breakpoint) {
+        @content;
+      }
+    } @else if $direction==min {
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    } @else {
+      @media ($direction: $breakpoint) {
+        @content;
+      }
+    }
+  }
+}
+
+///////
+
+.Toastify__toast {
+  border-radius: 4px !important;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15) !important;
+  padding: 0.75rem 1.25rem;
+  font-size: 16px;
+  min-height: 42px !important;
+  padding: 14px 20px 14px 45px !important;
+  color: #595959;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 15px;
+
+    width: 19px;
+    height: 19px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateY(-50%);
+  }
+
+  @include breakpoint(mobile, max) {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  &-body {
+    font-weight: 500;
+    text-align: center;
+    word-wrap: break-word;
+    width: 100%;
+  }
+
+  &-container {
+    width: auto !important;
+
+    @include breakpoint(mobile, max) {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+
+  &--success {
+    background: #fff !important;
+
+    &:before {
+      background-image: url('../src/assets/img/icons/success-toaster.svg');
+    }
+  }
+
+  &--warning {
+    background: #fff !important;
+
+    &:before {
+      background-image: url('../src/assets/img/icons/error-toaster.svg');
+    }
+  }
+
+  &--error {
+    background: #fff !important;
+
+    &:before {
+      background-image: url('../src/assets/img/icons/error-toaster.svg');
+    }
+  }
+
+  &--info {
+    background: #fff !important;
+
+    &:before {
+      background-image: url('../src/assets/img/icons/info-toaster.svg');
+    }
+  }
+}
+
+.page-header,
+.page-header-space {
+  height: 250px;
+}
+
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#printme-box,
+#printmessenger {
+  display: none;
+}
+
+.print-container {
+  width: 100%;
+  overflow-x: hidden !important;
+}
+
+tbody {
+  display: table-row-group;
+}
+
+tbody {
+  &::after {
+    content: '';
+    display: block !important;
+    page-break-after: always !important;
+    page-break-inside: avoid !important;
+    page-break-before: avoid !important;
+  }
+}
+
+table tbody {
+  border-bottom: 1px solid #e0e6ed;
+}
+
+.print-page {
+  page-break-after: auto !important;
+}
+
+@media print {
+  thead {
+    display: table-header-group !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  body,
+  page {
+    margin: 0;
+    -webkit-print-color-adjust: exact !important;
+    box-shadow: 0;
+  }
+
+  html,
+  body {
+    border: 1px solid white;
+    height: 99% !important;
+    margin: 0 !important;
+    padding: 0 5px 0 0 !important;
+
+    overflow: hidden;
+    visibility: hidden !important;
+    page-break-after: avoid !important;
+    page-break-before: avoid !important;
+  }
+
+  #no-printme,
+  #no-printme-preview,
+  #no-printme-box,
+  #no-printmessenger {
+    display: none !important;
+  }
+
+  .print-content {
+    width: 100%;
+    font-size: 11px;
+    border: none !important;
+
+    tr {
+      td {
+        border: none !important;
+      }
+    }
+  }
+
+  .print-pad-none {
+    display: none !important;
+  }
+
+  #printmessenger {
+    overflow: visible !important;
+    display: block !important;
+
+    * {
+      visibility: visible !important;
+    }
+  }
+
+  #printme,
+  #printme-preview,
+  #printme-box {
+    position: absolute !important;
+    overflow: visible !important;
+    display: block !important;
+    top: 0 !important;
+    left: 0 !important;
+
+    * {
+      visibility: visible !important;
+    }
+
+    &:last-child {
+      page-break-after: avoid !important;
+    }
+  }
+
+  .side-menu {
+    display: none;
+  }
+
+  .pageNumber {
+    text-align: right;
+    counter-reset: page;
+  }
+
+  .pageNumber:after {
+    counter-increment: page;
+    content: 'Page ' counter(page) ' of ' counter(pages);
+    page-break-after: always;
+    left: 0;
+    top: 100%;
+    white-space: nowrap;
+    z-index: 20;
+    -moz-border-radius: 5px;
+    -moz-box-shadow: 0px 0px 4px #222;
+    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  }
+
+  // Default page size - A4
+}
+
+// Material UI custom override style
+.custom-alert-info {
+  .MuiAlert-standardInfo {
+    background-color: #f4f6f9;
+    border-left: solid 4px #a5b0be;
+  }
+}
+
+// Two lines Ellipsis
+.two-line-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+//reports
+
+.hide-checkbox table thead.MuiTableHead-root tr th:last-child {
+  padding-right: 20px !important;
+}
+.hide-checkbox table thead.MuiTableHead-root tr th:first-child {
+  padding-left: 20px !important;
+}
+
+body .cv-table-layout .MuiTableCell-root.MuiTableCell-head {
+  padding: 13px 9px !important;
+}
+
+body .cv-table-layout .MuiTableCell-root.MuiTableCell-head {
+  min-width: 230px;
+}
+
+body .cv-table-layout .MuiTableCell-root.MuiTableCell-head:nth-child(2) {
+  width: 270px;
+}
+
+.contact-flex .daterange-contact {
+  margin: 20px 20px 20px 0 !important;
+
+  .e-input-group {
+    height: 40px !important;
+    .e-input-group-icon.e-range-icon {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.date-margin {
+  margin-bottom: 0 !important;
+}
+.section-width {
+  width: 282px;
+}
+.date-picker-single {
+  width: 100%;
+  border: 1px solid #a5b0be;
+  padding: 10px 12px;
+  font-size: 16px;
+  transition: all 0.25s ease;
+  border-radius: 4px;
+  background-color: #fff;
+  position: relative;
+}
+.date-item {
+  position: relative;
+  .react-datepicker-wrapper {
+    width: 100%;
+  }
+}
+
+.react-datepicker-popper {
+  z-index: 99;
+}
+.calander-icon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  width: 20px;
+  height: 23px;
+}
+
+.date-item .daterangepicker-control-section {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin-left: 0px !important;
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+  margin-bottom: 1.25rem !important;
+}
+
+// Schedule
+.daterangepicker-input .e-input-group {
+  margin-bottom: 0;
+}
+
+.react-datepicker__navigation--next,
+.react-datepicker__navigation--previous {
+  outline: none;
+}

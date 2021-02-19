@@ -1,0 +1,15 @@
+body .MuiContainer-root {
+    margin-left: 0;
+}
+body main {
+    padding-left: 18px;
+}
+.MuiTableCell-root {
+    font-size: 14px;
+}
+th.MuiTableCell-root.MuiTableCell-head span {
+    font-weight: 600;
+}
+th.MuiTableCell-root.MuiTableCell-head {
+    text-align: left;
+}

@@ -1,0 +1,84 @@
+table tbody {
+  background-color: #ffffff;
+}
+table thead tr {
+  border: 1px solid #e0e6ed;
+}
+
+// table thead tr th {
+//     border: 1px solid #E0E6ED !important;
+// }
+
+table tbody tr td {
+  border-bottom: 1px solid #e0e6ed !important;
+}
+
+table tbody {
+  border-left: 1px solid #e0e6ed;
+  border-right: 1px solid #e0e6ed;
+}
+
+.e-calendar .e-content span.e-day {
+  border: 1px solid #e0e6ed;
+}
+
+.MuiToolbar-root.MuiToolbar-regular div[class*='MUIDataTableToolbar-actions'] span.MuiIconButton-label {
+  background-image: url('../../../assets/img/icons/filter-icon.svg');
+  height: 16px;
+  width: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.MuiButtonBase-root.MuiTableSortLabel-root:before {
+  content: ' ';
+  background-image: url('../../../assets/img/icons/arrow-up-icon.svg');
+  height: 6px;
+  width: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 12px;
+  display: block;
+  width: 100%;
+  opacity: 0.6;
+}
+
+table div[class*='MUIDataTableHeadCell-sortAction'] svg {
+  position: absolute;
+}
+
+.MuiButtonBase-root.MuiTableSortLabel-root svg {
+  display: none;
+}
+
+.MuiButtonBase-root.MuiTableSortLabel-root:after {
+  content: ' ';
+  background-image: url('../../../assets/img/icons/arrow-down-icon.svg');
+  height: 6px;
+  width: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 12px;
+  display: block;
+  width: 100%;
+  margin-top: 3px;
+  opacity: 0.6;
+}
+th.MuiTableCell-root.MuiTableCell-head {
+  position: relative;
+}
+span.MuiButtonBase-root.MuiTableSortLabel-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+th.MuiTableCell-root[aria-sort='ascending'] .MuiButtonBase-root.MuiTableSortLabel-root:after {
+  opacity: 1;
+}
+
+th.MuiTableCell-root[aria-sort='descending'] .MuiButtonBase-root.MuiTableSortLabel-root:before {
+  opacity: 1;
+}

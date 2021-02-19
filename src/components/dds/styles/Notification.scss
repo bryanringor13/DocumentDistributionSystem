@@ -1,0 +1,21 @@
+.notif-container {
+  margin-top: 24px;
+  max-height: 335px;
+  overflow-y: hidden;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+.notif-container::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
+.new-notif-dot {
+  height: 10px;
+  width: 10px;
+  background-color: #fa5656;
+  margin-bottom: 2px;
+  border-radius: 50%;
+  display: inline-block;
+}

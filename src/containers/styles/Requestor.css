@@ -1,0 +1,141 @@
+.btn-trash-wrapper button.MuiButtonBase-root.MuiIconButton-root {
+  padding: 0;
+  margin-top: 23px;
+}
+.date-picker .MuiFormControl-root.MuiTextField-root:last-child input {
+  border-left: 0;
+}
+.date-picker .MuiFormControl-root.MuiTextField-root:first-child input {
+  border-right: 0;
+}
+
+.search-field input {
+  background-image: url('../../assets/img/icons/search-icon.svg');
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position-y: center;
+  background-position-x: calc(100% - 10px);
+  height: 24px;
+}
+
+.daterangepicker-control-section {
+  max-width: 246px !important;
+  margin: 30px auto !important;
+  padding-top: 50px !important;
+}
+
+.daterangepicker-control-section .e-input-group {
+  border: 1px solid #a5b0be !important;
+  padding: 14px 14px !important;
+  font-size: 16px !important;
+  height: 47px !important;
+  font-weight: normal !important;
+  transition: all 0.25s ease !important;
+  border-radius: 4px !important;
+  background-color: #fff !important;
+}
+
+.daterangepicker-control-section input {
+  margin-top: -6px !important;
+}
+
+.daterangepicker-control-section .e-input-group-icon {
+  margin-top: -5px !important;
+}
+
+.daterangepicker-control-section {
+  max-width: 282px !important;
+  margin-left: 0px !important;
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+}
+/**    **/
+
+.daterangepicker-control-section-filter {
+  max-width: 246px !important;
+  margin: 16px auto !important;
+  padding-top: 50px !important;
+}
+
+.daterangepicker-control-section-filter input {
+  font-weight: normal;
+}
+.daterangepicker-control-section-filter .e-input-group {
+  border: 1px solid #a5b0be !important;
+  padding: 10px 14px !important;
+  font-size: 16px !important;
+  height: 37px !important;
+  font-weight: normal !important;
+  transition: all 0.25s ease !important;
+  border-radius: 4px !important;
+  background-color: #fff !important;
+}
+
+.daterangepicker-control-section-filter input {
+  margin-top: -6px !important;
+}
+
+.daterangepicker-control-section-filter .e-input-group-icon {
+  margin-top: -5px !important;
+}
+
+.daterangepicker-control-section-filter {
+  max-width: 282px !important;
+  margin-left: 0px !important;
+  padding-top: 0px !important;
+  margin-top: 13px !important;
+  margin-bottom: 15px !important;
+}
+
+/** **/
+
+.daterangepicker-control-section-new {
+  max-width: 246px !important;
+  margin: 30px auto !important;
+  padding-top: 50px !important;
+}
+
+.daterangepicker-control-section-new .e-input-group {
+  border: 1px solid #a5b0be !important;
+  padding: 10px 14px !important;
+  font-size: 16px !important;
+  height: 40px !important;
+  transition: all 0.25s ease !important;
+  border-radius: 4px !important;
+  background-color: #fff !important;
+}
+
+.daterangepicker-control-section-new input {
+  margin-top: -6px !important;
+}
+
+.daterangepicker-control-section-new .e-input-group-icon {
+  margin-top: -5px !important;
+}
+
+.daterangepicker-control-section-new {
+  max-width: 282px !important;
+  margin-left: 0px !important;
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+}
+
+.daterangepicker-control-section-new .e-range-icon {
+  font-size: 21px !important;
+}
+
+.MuiButtonGroup-root .MuiButton-contained {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: #e0e6ed !important;
+  color: #2f3542 !important;
+}
+
+.MuiButtonGroup-root .MuiButton-outlined {
+  border-color: #e0e6ed;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(47, 53, 66, 0.8);
+}

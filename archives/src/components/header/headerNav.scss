@@ -1,0 +1,52 @@
+.side-menu {
+    background: #1f236f;
+    max-width: 110px;
+}
+.side-menu .MuiSvgIcon-root {
+    color: #fff;
+}
+.side-menu .MuiListItemText-root {
+    color: #fff;
+    width: 100%;
+}
+.side-menu .MuiListItemIcon-root {
+    background: rgba(255, 255, 255, 0.25);
+    text-align: center;
+    padding: 14px;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.side-menu .MuiListItem-root {
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 8px;
+    opacity: 0.65;
+}
+.side-menu .MuiTypography-displayBlock {
+    font-size: 10px;
+}
+.side-menu .MuiListItem-root:hover, .side-menu a.active .MuiListItem-root {
+    opacity: 1;
+}
+.top-menu {
+    width: 100%;
+    position: relative;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+h3.data-total-count {
+    font-size: 3rem;
+    margin: 0;
+}
+div.data-table-header a {
+    color: #000000;
+    display: inline-block;
+}
+h5.data-head-title {
+    margin: 0;
+}
+div.data-table-header {
+    padding: 25px;
+}

@@ -1,0 +1,81 @@
+body .MuiTableCell-root {
+  line-height: 1;
+  padding: 13px 18px;
+}
+body .MuiTableCell-head {
+  font-weight: 600;
+  background-color: #f4f6f9;
+  line-height: 1.35;
+}
+
+body .MuiPaper-elevation1 {
+  box-shadow: none;
+  border: 1px solid #e0e6ed;
+}
+button.MuiButtonBase-root {
+  margin: 15px 0px;
+  padding: 6px 25px;
+}
+
+body .MuiContainer-root {
+  margin-left: 0;
+}
+
+.cd-button-group-sorter button {
+  background: white;
+  color: #7f7f7f;
+  border: 1px solid #e0e6ed;
+  font-weight: 400;
+  border-radius: 0px;
+}
+.cd-button-action button {
+  margin: 0;
+  font-size: 14px;
+  padding: 3px 25px;
+  margin-top: -9px;
+  margin-bottom: -8px;
+}
+body .MuiPaginationItem-page {
+  padding: 0;
+  height: 27px;
+  border-radius: 4px;
+  min-width: 27px;
+}
+.MuiPaginationItem-page.Mui-selected {
+  background-color: rgba(0, 0, 0, 0.08);
+  padding: 0;
+  background: #d1d5dd;
+}
+body main {
+  padding-left: 15px;
+  margin-top: 0px;
+  min-height: 100vh;
+  height: auto !important;
+}
+.main-content-wrapper {
+  width: 100%;
+}
+
+body .MuiPaper-root {
+  box-shadow: none;
+}
+.data-table-footer {
+  text-align: center;
+  padding: 10px;
+}
+
+.cd-status-label.status-for-receipt,
+.cd-status-label.status-for-deposit {
+  color: $orange;
+}
+
+.cd-status-label.status-cancelled {
+  color: $light-grey;
+}
+.cd-status-label.status-bounced {
+  color: $error;
+}
+.cd-status-label.status-clearing,
+.cd-status-label.status-cleared {
+  color: $primary;
+}

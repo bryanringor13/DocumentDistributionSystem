@@ -1,0 +1,38 @@
+.pr-status-button label.new_request-new_request,
+.pr-status-button label.processed-processed {
+  background-color: #e0e6ed !important;
+}
+.pr-status-button label span,
+.pr-status-button label span,
+.pr-status-button label span,
+.pr-status-button label span,
+.pr-status-button label span,
+.pr-status-button label span {
+  color: rgba(47, 53, 66, 0.8);
+}
+.pr-status-button label.new_request-new_request span,
+.pr-status-button label.processed-processed span {
+  font-weight: 500 !important;
+  color: #2f3542;
+}
+.pr-status-button span.MuiIconButton-label {
+  display: none;
+}
+
+.pr-status-button .MuiFormControlLabel-root {
+  background: #ffffff;
+  border-right: 1px solid #e0e6ed;
+  box-sizing: border-box;
+  border-radius: 0px;
+  margin: 0;
+  padding: 8px 24px;
+  text-align: center;
+}
+.pr-status-button fieldset.MuiFormControl-root.pr-status-button {
+  border: 1px solid #e0e6ed;
+  border-right: 0px;
+}
+.pr-status-button .MuiButtonBase-root.MuiIconButton-root {
+  padding: 0px;
+}
+

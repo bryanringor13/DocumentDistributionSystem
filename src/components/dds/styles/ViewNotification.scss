@@ -1,0 +1,19 @@
+.container-notif {
+  border: 1px solid #e0e6ed;
+  border-radius: 4px;
+  // width: 603px;
+  padding: 40px;
+}
+
+.notif-title {
+  font-weight: bold !important;
+  font-size: 28px !important;
+}
+
+.close-btn-notif {
+  color: #2f3542 !important;
+  background-color: #1f236f00 !important;
+  border: 1px solid rgba(47, 53, 66, 0.4) !important;
+  width: 48px;
+  height: 48px;
+}

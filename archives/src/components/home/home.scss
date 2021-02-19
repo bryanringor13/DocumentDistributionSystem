@@ -1,0 +1,72 @@
+.no-auth-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  min-height: 0;
+  background-color: #f2f4f7;
+
+  &-banner {
+    flex: auto;
+    height: 100vh;
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &-sider {
+    position: relative;
+    min-width: 0;
+    transition: all 0.2s;
+    flex: 0 0 650px;
+    max-width: 650px;
+    width: 650px;
+
+    @media (max-width: 1400px) {
+      flex-basis: 500px;
+      max-width: 500px;
+      width: 500px;
+    }
+
+    @media (max-width: 1200px) {
+      flex-basis: 50%;
+      max-width: 50%;
+      width: 50%;
+    }
+
+    @media (max-width: 768px) {
+      flex-basis: 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &-sider-children {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: auto;
+  }
+
+  &-sider-content {
+    padding: 2.5rem 20%;
+    margin: auto 0;
+
+    @media (max-width: 1400px) {
+      padding: 2.5rem 15%;
+    }
+
+    @media (max-width: 1200px) {
+      padding: 2.5rem 10%;
+    }
+
+    @media (max-width: 768px) {
+      margin: 0;
+    }
+  }
+}

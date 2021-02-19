@@ -1,0 +1,18 @@
+.header-top {
+    padding: 5px 25px 20px 13px;
+}
+.header-top img.logo {
+    width: 128px;
+    height: auto;
+}
+.header-top .user-icon .MuiAvatar-root {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+    margin-right: 0;
+}
+.user-icon-popup .MuiPaper-root.MuiMenu-paper.MuiPopover-paper {
+    margin-top: 49px;
+    box-shadow: none;
+    border: 1px solid #dadada;
+}
